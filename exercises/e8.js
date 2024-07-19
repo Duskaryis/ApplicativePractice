@@ -5,10 +5,12 @@ import { data } from "../data/data";
 // Return example: 'Planet Name'
 
 export function findPlanetNameByMoon(data, moonName) {
-  // Your code goes here...
+	// Your code goes here...
+	const e = data.planets
+		.filter((planet) => planet.moons)
+		.find((planet) => planet.moons.includes(moonName));
+	return e.name;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-8"
