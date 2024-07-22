@@ -5,10 +5,11 @@ import { data } from "../data/data";
 // Return example: { key1: value1, key2: value2, ... , keyN: valueN }
 
 export function getAsteroidDataByName(data, asteroidName) {
-  // Your code goes here...
+	// Your code goes here...
+	return data.asteroids
+		.filter((asteroid) => asteroid.name)
+		.find((asteroid) => asteroid.name.includes(asteroidName));
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-10"
